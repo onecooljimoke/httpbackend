@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>httpbackend test</title>
+</head>
+
+<body ng-app="fakeresponse">
+  <div ng-controller="myctrl as ctrl">
+    <h1>Thoughts</h1>
+    <div ng-repeat="(key,val) in ctrl.thoughts">
+      {{key}} : {{val}}
+    </div>
+    <button type="button" ng-click="ctrl.getThoughts()">Get Thoughts</button>
+  </div>
+
+  <!-- CDN Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-mocks.js"></script>
+  
+  <!-- Angular Files -->
+  <script src="js/backend.module.js"></script>
+  <script src="js/app.module.js"></script>
+  <script src="js/app.service.js"></script>
+  <script src="js/app.controller.js"></script>
+  
+</body>
+
+</html>
